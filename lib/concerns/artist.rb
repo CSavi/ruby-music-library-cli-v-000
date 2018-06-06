@@ -4,7 +4,7 @@ class Artist
   extend Concerns::Findable
 
   attr_accessor :name, :songs, :genre
-  @@all = []  #Class variable
+  @@all = []  #Class Variable
 
   def initialize(name)
     @name = name
@@ -15,7 +15,7 @@ class Artist
     @@all
   end
 
-  def self.destroy_all #Class Helper 
+  def self.destroy_all #Class Helper
     @@all.clear
   end
 
