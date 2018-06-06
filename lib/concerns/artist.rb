@@ -4,18 +4,18 @@ class Artist
   extend Concerns::Findable
 
   attr_accessor :name, :songs, :genre
-  @@all = []
+  @@all = []  #Class variable
 
   def initialize(name)
     @name = name
     @songs = []
   end
 
-  def self.all
+  def self.all  #Class Reader
     @@all
   end
 
-  def self.destroy_all
+  def self.destroy_all #Class Helper 
     @@all.clear
   end
 
@@ -38,7 +38,7 @@ class Artist
   # def add_song(song)
   #   song.artist = self unless song.artist == self
   #   @songs << song unless @song.include?(song)
-  # end   
+  # end
 
   def genres
     @songs.collect{|song| song.genre}.uniq
