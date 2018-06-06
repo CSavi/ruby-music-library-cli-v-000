@@ -2,7 +2,7 @@ require 'pry'
 
 class Song
   extend Concerns::Findable
-  
+
   attr_accessor :name
   attr_reader :artist, :genre
   @@all = []
@@ -49,7 +49,7 @@ class Song
   # cleaner method:
   # def self.create(new_song)
   #   new(new_song).tap{|a| a.save}
-  # end   
+  # end
 
 
   def self.find_by_name(name)
