@@ -72,22 +72,14 @@ class MusicLibraryController
     end
   end
 
-
-#prompts the user to choose a song from the alphabetized list output by #list_songs
-#accepts user input
-#upon receiving valid input 'plays' the matching song from the alphabetized list output by #list_songs
-#does not 'puts' anything out if a matching song is not found
-#checks that the user entered a number between 1 and the total number of songs in the library
-
   def play_song
     puts "Which song number would you like to play?"
     input = gets.strip.to_i
-  
+
     if (1..Song.all.length).include?(input)
       s = Song.sorted[input - 1]
       puts "Playing #{s.name} by #{s.artist.name}"
     end
-    #binding.pry
   end
 
 end

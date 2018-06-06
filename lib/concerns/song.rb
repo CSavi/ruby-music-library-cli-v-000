@@ -46,6 +46,10 @@ class Song
     n.save
     n
   end
+
+  # def self.create(new_song)
+  #   new(new_song).tap{|a| a.save}
+  # end   
  # binding.pry
 
   def self.find_by_name(name)
