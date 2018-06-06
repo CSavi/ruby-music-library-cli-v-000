@@ -46,11 +46,11 @@ class Song
     n.save
     n
   end
-
+  # cleaner method:
   # def self.create(new_song)
   #   new(new_song).tap{|a| a.save}
   # end   
- # binding.pry
+
 
   def self.find_by_name(name)
     @@all.detect {|song| song.name == name}
